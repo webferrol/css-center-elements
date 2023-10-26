@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex center</title>
+  <style>
+
+    body :is(.flex-container) {
+      
+    }
+
+
+    .flex-container {     
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      inline-size: 150px;
+      block-size: 150px;
+      border: 5px solid;
+      background-color: #09f;
+
+      & .flex-item { /* Nesting css */
+
+        inline-size: 50px;
+        block-size: 50px;
+
+        background-color: tomato;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </div>
+</body>
+</html>
